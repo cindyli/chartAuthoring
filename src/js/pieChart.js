@@ -31,10 +31,11 @@ https://raw.githubusercontent.com/fluid-project/chartAuthoring/master/LICENSE.tx
                 container: "{that}.dom.pie",
                 options: {
                     pieOptions: "{pieChart}.drawingOptions",
+                    svgOptions: "{pieChart}.options.svgOptions",
                     model: {
                         dataSet: "{pieChart}.model.dataSet",
-                        pieTitle: "{pieChart}.model.pieTitle",
-                        pieDescription: "{pieChart}.model.pieDescription",
+                        svgTitle: "{pieChart}.model.svgTitle",
+                        svgDescription: "{pieChart}.model.svgDescription",
                         activeSliceId: "{pieChart}.model.activeDataId"
                     },
                     events: {
@@ -67,14 +68,16 @@ https://raw.githubusercontent.com/fluid-project/chartAuthoring/master/LICENSE.tx
             // dataSet accepts an array of objects in a format of
             // [{id: string, value: number, label: string}, ... ]
             dataSet: [],
-            pieTitle: "Pie Chart",
-            pieDescription: "A pie chart."
+            svgTitle: "Pie Chart",
+            svgDescription: "A pie chart."
             // activeDataId: relayed to activeRowId/activeSliceId of legend/pie
 
         },
-        pieChartOptions: {
+        svgOptions: {
             // width: number,
-            // height: number,
+            // height: number
+        },
+        pieChartOptions: {
             // colors: array, // An array of colors to fill slices generated for corresponding values of model.dataSet
             // outerRadius: number,
             // innerRadius: number,
